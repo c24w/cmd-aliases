@@ -8,7 +8,7 @@ set aliasfile="%dir%%aliasfilename%"
 (
 	echo cls
 	echo @echo off
-	echo doskey /macrofile=./%aliasfilename%
+	echo doskey /macrofile="%~dp0"%aliasfilename%
 	echo dir
 ) > %autorunfile%
 
