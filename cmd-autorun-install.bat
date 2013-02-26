@@ -17,3 +17,5 @@ set aliasfile="%dir%%aliasfilename%"
 ) > %aliasfile%
 
 reg add "hklm\software\microsoft\command processor" /v Autorun /t reg_sz /d \"%autorunfile%\"
+
+DEL "%~f0"
