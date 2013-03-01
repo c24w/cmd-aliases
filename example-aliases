@@ -1,0 +1,19 @@
+#=# Aliases
+aliases=doskey /macros
+aliashelp=(echo F7 - display command history && echo.Alt+F7 - clear command history && echo.[chars]F8 - search for command && echo.F9 - select command by number && echo.Alt+F10 - clear macro definitions)
+
+#=# Git
+g=git $*
+gs=git status
+ga=git add -A$tgit status
+gc=git commit -m$*
+gps=git push
+gpl=git pull
+
+#=# Navigation
+js=cd \work\sevendigital-com\src\SevenDigital.Com.Web\Static\js
+wk=cd \work
+
+#=# Apps
+.=explorer .
+sub="c:\Program Files\Sublime Text 2\sublime_text.exe" $*
