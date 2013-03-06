@@ -8,11 +8,14 @@ gs=git status
 ga=git add -A$tgit status
 gc=git commit -m$*
 gps=git push
+gpsh=git push
 gpl=git pull
+gl=git log$*
 
 #=# Navigation
 js=cd \work\sevendigital-com\src\SevenDigital.Com.Web\Static\js
 wk=cd \work
+~=cd %USERPROFILE%
 
 #=# Apps
 .=explorer .
