@@ -11,6 +11,7 @@ gps=git push
 gpsh=git push
 gpl=git pull
 gl=git log$*
+gr=git reset$*
 
 #=# Navigation
 js=cd \work\sevendigital-com\src\SevenDigital.Com.Web\Static\js
@@ -18,5 +19,6 @@ wk=cd \work
 ~=cd %USERPROFILE%
 
 #=# Apps
+sln=for %f in (*.sln) do start %f
 .=explorer .
 sub="c:\Program Files\Sublime Text 2\sublime_text.exe" $*

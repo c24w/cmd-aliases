@@ -10,6 +10,7 @@ echo Creating %autorunfile%
 (
 	echo @echo off
 	echo doskey /macrofile=%aliasfile%
+	echo set ~=%USERPROFILE%
 ) > %autorunfile%
 
 echo Creating %aliasfile%
