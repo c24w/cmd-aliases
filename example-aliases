@@ -15,10 +15,10 @@ gln=git log -n$*
 gr=git reset $*
 
 #=# Navigation
-js=cd \work\sevendigital-com\src\SevenDigital.Com.Web\Static\js
-wk=cd \work
-~=cd %USERPROFILE%
-`=cd ..\$*
+js=pushd \work\sevendigital-com\src\SevenDigital.Com.Web\Static\js
+wk=pushd \work
+~=pushd %USERPROFILE%
+`=pushd ..\$*
 
 #=# Apps
 sln=for %f in (*.sln) do start %f
