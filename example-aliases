@@ -13,6 +13,8 @@ gpl=git pull
 gl=git log $*
 gln=git log -n$*
 gr=git reset $*
+snapshot=git stash save "snapshot (%DATE% - %TIME%): $*" && git stash apply "stash@{0}"
+snapshots=git stash list --grep snapshot
 
 #=# Navigation
 js=pushd \work\sevendigital-com\src\SevenDigital.Com.Web\Static\js
