@@ -25,7 +25,7 @@ snapshot=echo off $t git stash save "snapshot (%DATE% - %TIME:~0,8%) $*" $t git 
 
 snapshot+u=echo off $t git stash save -u "snapshot (%DATE% - %TIME:~0,8%) $*" $t git stash apply "stash@{0}" $t echo on
 
-snapshot*=echo off $t git stash save -u "snapshot (%DATE% - %TIME:~0,8%) $*" $t git stash apply "stash@{0}" $t echo on
+snapshot*=echo off $t git stash save -a "snapshot (%DATE% - %TIME:~0,8%) $*" $t git stash apply "stash@{0}" $t echo on
 
 snapshots=git stash list --grep snapshot
 
