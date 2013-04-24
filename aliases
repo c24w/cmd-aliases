@@ -42,7 +42,7 @@ wk = pushd \work
 
 #===	Apps
 
-sln=for %f in (*.sln) do start %f
+sln=echo off $t for %f in (*.sln) do echo Opening %f & start %f $t echo on
 .=explorer .
 st="c:\Program Files\Sublime Text 2\sublime_text.exe" $*
 
