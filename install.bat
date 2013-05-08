@@ -1,9 +1,13 @@
 @echo off
+
 set dir=%~dp0
+
 set autorunfilename=cmd-autorun.bat
-set autorunfile="%USERPROFILE%\%autorunfilename%"
+set autorunfile="%dir%%autorunfilename%"
+
 set aliasfilename=aliases
 set aliasfile="%dir%%aliasfilename%"
+
 set regLoc=HKLM\Software\Microsoft\Command Processor
 
 echo Creating %autorunfile%
