@@ -10,7 +10,8 @@ g = git $*
 gs = git status
 ga = git add $*
 gaa = echo off $t git add -A $t git status $t echo on
-gc = git commit -m$*
+gc = git commit
+gcm = git commit -m$*
 gpl = git pull
 gpsh = git push
 gl = git log $*
@@ -18,7 +19,7 @@ gln = git log -n $*
 gr = git reset $*
 
 
-#==	Snapshots
+#===	Git snapshots
 
 snapshot = echo off $t git stash save "snapshot (%DATE% - %TIME:~0,8%) $*" $t git stash apply "stash@{0}" $t echo on
 
