@@ -48,3 +48,7 @@ sln=echo off $t for %f in (*.sln) do echo Opening %f & start %f $t echo on
 st="c:\Program Files\Sublime Text 2\sublime_text.exe" $*
 
 reload = cmd $t exit
+
+
+#===	Other
+c=color 8f
