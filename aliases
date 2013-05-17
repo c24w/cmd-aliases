@@ -21,11 +21,12 @@ gr = git reset $*
 
 #===	Git snapshots
 
-snapshot = echo off $t git stash save "snapshot (%DATE% - %TIME:~0,8%) $*" $t git stash apply "stash@{0}" $t echo on
-
-snapshot+u = echo off $t git stash save -u "snapshot (%DATE% - %TIME:~0,8%) $*" $t git stash apply "stash@{0}" $t echo on
-
-snapshot* = echo off $t git stash save -a "snapshot (%DATE% - %TIME:~0,8%) $*" $t git stash apply "stash@{0}" $t echo on
+#==	tracked
+snapshot = echo off && git stash save "snapshot (%DATE% - %TIME:~0,8%) $*" && git stash apply "stash@{0}" && echo on
+#==	tracked & untracked
+snapshot+u = echo off && git stash save -u "snapshot (%DATE% - %TIME:~0,8%) $*" && git stash apply "stash@{0}" && echo on
+#==	tracked, untracked & ignored
+snapshot+u+i = echo off && git stash save -a "snapshot (%DATE% - %TIME:~0,8%) $*" && git stash apply "stash@{0}" && echo on
 
 snapshots = git stash list --grep snapshot
 
@@ -47,8 +48,7 @@ sln=echo off $t for %f in (*.sln) do echo Opening %f & start %f $t echo on
 .=explorer .
 st="c:\Program Files\Sublime Text 2\sublime_text.exe" $*
 
-reload = cmd $t exit
-
 
 #===	Other
+reload = cmd $t exit
 c=color 8f
