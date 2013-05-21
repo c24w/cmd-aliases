@@ -17,6 +17,7 @@ gpsh = git push
 gl = git log $*
 gln = git log -n $*
 gr = git reset $*
+gco = git checkout $*
 
 
 #===	Git snapshots
